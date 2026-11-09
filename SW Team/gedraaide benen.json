@@ -1,0 +1,103 @@
+{
+  "format": "bittle-studio",
+  "version": 1,
+  "xml": "<?xml version=\"1.0\"?>\n<!-- created with Phobos 1.0.1 \"Capricious Choutengan\" -->\n  <robot name=\"bittle\">\n\n    <link name=\"base-frame-link\">\n      <inertial>\n        <origin xyz=\"0 0 0\" rpy=\"0 0 0\"/>\n        <mass value=\"0.108\"/>\n        <inertia ixx=\"0.0001562\" ixy=\"0\" ixz=\"-4e-05\" iyy=\"0.0000613\" iyz=\"0\" izz=\"0.0002107\"/>\n      </inertial>\n      <visual name=\"base_frame\">\n        <origin xyz=\"0 0 0\" rpy=\"0 0 0\"/>\n        <geometry>\n          <mesh filename=\"obj/base_frame.obj\" scale=\"0.10 0.10 0.10\"/>\n        </geometry>\n      </visual>\n      <collision name=\"base_frame_c\">\n        <origin xyz=\"0 0 0\" rpy=\"0 0 0\"/>\n        <geometry>\n          <mesh filename=\"obj/base_frame.001.obj\" scale=\"0.10 0.10 0.10\"/>\n        </geometry>\n      </collision>\n    </link>\n\n    <link name=\"battery-link\">\n      <inertial>\n        <origin xyz=\"0 0 0\" rpy=\"0 0 0\"/>\n        <mass value=\"0.056\"/>\n        <inertia ixx=\"0.0000337\" ixy=\"0\" ixz=\"0\" iyy=\"0.0000044\" iyz=\"0.0000031\" izz=\"0.0000361\"/>\n      </inertial>\n      <visual name=\"battery\">\n        <origin xyz=\"0 0 0\" rpy=\"0 0 0\"/>\n        <geometry>\n          <mesh filename=\"obj/battery.obj\" scale=\"0.10 0.10 0.10\"/>\n        </geometry>\n      </visual>\n      <collision name=\"battery_c\">\n        <origin xyz=\"0 0 0\" rpy=\"0 0 0\"/>\n        <geometry>\n          <mesh filename=\"obj/battery.001.obj\" scale=\"0.10 0.10 0.10\"/>\n        </geometry>\n      </collision>\n    </link>\n\n    <link name=\"cover-link\">\n      <inertial>\n        <origin xyz=\"0 0 0\" rpy=\"0 0 0\"/>\n        <mass value=\"0.013\"/>\n        <inertia ixx=\"0.0000039\" ixy=\"0\" ixz=\"0\" iyy=\"0.0000057\" iyz=\"0\" izz=\"0.000009\"/>\n      </inertial>\n      <visual name=\"cover\">\n        <origin xyz=\"0 0 0\" rpy=\"0 0 0\"/>\n        <geometry>\n          <mesh filename=\"obj/cover.obj\" scale=\"0.10 0.10 0.10\"/>\n        </geometry>\n      </visual>\n      <collision name=\"cover_c\">\n        <origin xyz=\"0 0 0\" rpy=\"0 0 0\"/>\n        <geometry>\n          <mesh filename=\"obj/cover.001.obj\" scale=\"0.10 0.10 0.10\"/>\n        </geometry>\n      </collision>\n    </link>\n\n    <link name=\"imu_link\">\n      <inertial>\n        <origin xyz=\"0 0 0\" rpy=\"0 0 0\"/>\n        <mass value=\"0.001\"/>\n        <inertia ixx=\"0.00001\" ixy=\"0\" ixz=\"0\" iyy=\"0.00001\" iyz=\"0\" izz=\"0.00001\"/>\n      </inertial>\n      <visual name=\"imu\">\n        <origin xyz=\"0 0 0\" rpy=\"0 0 3.14159\"/>\n        <geometry>\n          <mesh filename=\"obj/Cube.011.obj\" scale=\"0.10 0.10 0.10\"/>\n        </geometry>\n      </visual>\n    </link>\n\n    <link name=\"left-back-knee-link\">\n      <inertial>\n        <origin xyz=\"-0.008998 0 -0.014638\" rpy=\"0 0 0\"/>\n        <mass value=\"0.017\"/>\n        <inertia ixx=\"8e-05\" ixy=\"-4e-05\" ixz=\"0\" iyy=\"0.0000065\" iyz=\"-8e-05\" izz=\"0.0000063\"/>\n      </inertial>\n      <visual name=\"left_back_knee\">\n        <origin xyz=\"-0.008998 0 -0.014638\" rpy=\"-1.5708 1.5708 0\"/>\n        <geometry>\n          <mesh filename=\"obj/left_knee.001.obj\" scale=\"0.10 0.10 0.10\"/>\n        </geometry>\n      </visual>\n      <collision name=\"left_back_knee_c\">\n        <origin xyz=\"-0.008998 0 -0.014638\" rpy=\"-1.5708 1.5708 0\"/>\n        <geometry>\n          <mesh filename=\"obj/left_knee.002.obj\" scale=\"0.10 0.10 0.10\"/>\n        </geometry>\n      </collision>\n    </link>\n\n    <link name=\"left-back-shoulder-link\">\n      <inertial>\n        <origin xyz=\"0 -0.024575 0.004372\" rpy=\"0 0 0\"/>\n        <mass value=\"0.006\"/>\n        <inertia ixx=\"0.0000044\" ixy=\"0\" ixz=\"0\" iyy=\"4e-05\" iyz=\"0\" izz=\"0.0000044\"/>\n      </inertial>\n      <visual name=\"left_back_shoulder\">\n        <origin xyz=\"0 -0.024575 0.004372\" rpy=\"-1.5708 1.5708 0\"/>\n        <geometry>\n          <mesh filename=\"obj/shoulder.001.obj\" scale=\"0.10 0.10 0.10\"/>\n        </geometry>\n      </visual>\n      <collision name=\"left_back_shoulder_c\">\n        <origin xyz=\"0 -0.024575 0.004372\" rpy=\"-1.5708 1.5708 0\"/>\n        <geometry>\n          <mesh filename=\"obj/shoulder.004.obj\" scale=\"0.10 0.10 0.10\"/>\n        </geometry>\n      </collision>\n    </link>\n\n    <link name=\"left-front-knee-link\">\n      <inertial>\n        <origin xyz=\"-0.009232 0 -0.014614\" rpy=\"0 0 0\"/>\n        <mass value=\"0.017\"/>\n        <inertia ixx=\"8e-05\" ixy=\"-4e-05\" ixz=\"0\" iyy=\"0.0000065\" iyz=\"-8e-05\" izz=\"0.0000063\"/>\n      </inertial>\n      <visual name=\"left_front_knee\">\n        <origin xyz=\"-0.009232 0 -0.014614\" rpy=\"-1.5708 1.5708 0\"/>\n        <geometry>\n          <mesh filename=\"obj/left_knee.obj\" scale=\"0.10 0.10 0.10\"/>\n        </geometry>\n      </visual>\n      <collision name=\"left_front_knee_c\">\n        <origin xyz=\"-0.009232 0 -0.014614\" rpy=\"-1.5708 1.5708 0\"/>\n        <geometry>\n          <mesh filename=\"obj/left_knee.003.obj\" scale=\"0.10 0.10 0.10\"/>\n        </geometry>\n      </collision>\n    </link>\n\n    <link name=\"left-front-shoulder-link\">\n      <inertial>\n        <origin xyz=\"0 -0.024575 0.004372\" rpy=\"0 0 0\"/>\n        <mass value=\"0.006\"/>\n        <inertia ixx=\"0.0000044\" ixy=\"0\" ixz=\"0\" iyy=\"4e-05\" iyz=\"0\" izz=\"0.0000044\"/>\n      </inertial>\n      <visual name=\"left_front_shoulder\">\n        <origin xyz=\"0 -0.024575 0.004372\" rpy=\"-1.5708 1.5708 0\"/>\n        <geometry>\n          <mesh filename=\"obj/shoulder.obj\" scale=\"0.10 0.10 0.10\"/>\n        </geometry>\n      </visual>\n      <collision name=\"left_front_shoulder_c\">\n        <origin xyz=\"0 -0.024575 0.004372\" rpy=\"-1.5708 1.5708 0\"/>\n        <geometry>\n          <mesh filename=\"obj/shoulder.007.obj\" scale=\"0.10 0.10 0.10\"/>\n        </geometry>\n      </collision>\n    </link>\n\n    <link name=\"mainboard_link\">\n      <inertial>\n        <origin xyz=\"0 0 0\" rpy=\"0 0 0\"/>\n        <mass value=\"0.001\"/>\n        <inertia ixx=\"0.00001\" ixy=\"0\" ixz=\"0\" iyy=\"0.00001\" iyz=\"0\" izz=\"0.00001\"/>\n      </inertial>\n      <visual name=\"mainboard\">\n        <origin xyz=\"0 0 0\" rpy=\"0 0 0\"/>\n        <geometry>\n          <mesh filename=\"obj/Plane.obj\" scale=\"0.10 0.10 0.10\"/>\n        </geometry>\n      </visual>\n    </link>\n\n    <link name=\"right-back-knee-link\">\n      <inertial>\n        <origin xyz=\"0.008426 -0.000238 -0.01382\" rpy=\"0 0 0\"/>\n        <mass value=\"0.017\"/>\n        <inertia ixx=\"8e-05\" ixy=\"-3e-05\" ixz=\"0\" iyy=\"0.0000065\" iyz=\"-5e-05\" izz=\"0.0000064\"/>\n      </inertial>\n      <visual name=\"right_back_knee\">\n        <origin xyz=\"0.008426 -0.000238 -0.01382\" rpy=\"-1.5708 -1.5708 0\"/>\n        <geometry>\n          <mesh filename=\"obj/right_knee.001.obj\" scale=\"0.10 0.10 0.10\"/>\n        </geometry>\n      </visual>\n      <collision name=\"right_back_knee_c\">\n        <origin xyz=\"0.008426 -0.000238 -0.01382\" rpy=\"-1.5708 -1.5708 0\"/>\n        <geometry>\n          <mesh filename=\"obj/right_knee.002.obj\" scale=\"0.10 0.10 0.10\"/>\n        </geometry>\n      </collision>\n    </link>\n\n    <link name=\"right-back-shoulder-link\">\n      <inertial>\n        <origin xyz=\"0 0.024575 0.00777\" rpy=\"0 0 0\"/>\n        <mass value=\"0.006\"/>\n        <inertia ixx=\"0.0000044\" ixy=\"0\" ixz=\"0\" iyy=\"4e-05\" iyz=\"0\" izz=\"0.0000044\"/>\n      </inertial>\n      <visual name=\"right_back_shoulder\">\n        <origin xyz=\"0 0.024575 0.00777\" rpy=\"1.5708 -1.5708 0\"/>\n        <geometry>\n          <mesh filename=\"obj/shoulder.002.obj\" scale=\"0.10 0.10 0.10\"/>\n        </geometry>\n      </visual>\n      <collision name=\"right_back_shoulder_c\">\n        <origin xyz=\"0 0.024575 0.00777\" rpy=\"1.5708 -1.5708 0\"/>\n        <geometry>\n          <mesh filename=\"obj/shoulder.005.obj\" scale=\"0.10 0.10 0.10\"/>\n        </geometry>\n      </collision>\n    </link>\n\n    <link name=\"right-front-knee-link\">\n      <inertial>\n        <origin xyz=\"0.009497 -0.000238 -0.01382\" rpy=\"0 0 0\"/>\n        <mass value=\"0.017\"/>\n        <inertia ixx=\"8e-05\" ixy=\"-3e-05\" ixz=\"0\" iyy=\"0.0000065\" iyz=\"-5e-05\" izz=\"0.0000064\"/>\n      </inertial>\n      <visual name=\"right_front_knee\">\n        <origin xyz=\"0.009497 -0.000238 -0.01382\" rpy=\"-1.5708 -1.5708 0\"/>\n        <geometry>\n          <mesh filename=\"obj/right_knee.obj\" scale=\"0.10 0.10 0.10\"/>\n        </geometry>\n      </visual>\n      <collision name=\"right_front_knee_c\">\n        <origin xyz=\"0.009497 -0.000238 -0.01382\" rpy=\"-1.5708 -1.5708 0\"/>\n        <geometry>\n          <mesh filename=\"obj/right_knee.003.obj\" scale=\"0.10 0.10 0.10\"/>\n        </geometry>\n      </collision>\n    </link>\n\n    <link name=\"right-front-shoulder-link\">\n      <inertial>\n        <origin xyz=\"0 0.024575 0.00777\" rpy=\"0 0 0\"/>\n        <mass value=\"0.006\"/>\n        <inertia ixx=\"0.0000044\" ixy=\"0\" ixz=\"0\" iyy=\"4e-05\" iyz=\"0\" izz=\"0.0000044\"/>\n      </inertial>\n      <visual name=\"right_front_shoulder\">\n        <origin xyz=\"0 0.024575 0.00777\" rpy=\"1.5708 -1.5708 0\"/>\n        <geometry>\n          <mesh filename=\"obj/shoulder.003.obj\" scale=\"0.10 0.10 0.10\"/>\n        </geometry>\n      </visual>\n      <collision name=\"right_front_shoulder_c\">\n        <origin xyz=\"0 0.024575 0.00777\" rpy=\"1.5708 -1.5708 0\"/>\n        <geometry>\n          <mesh filename=\"obj/shoulder.006.obj\" scale=\"0.10 0.10 0.10\"/>\n        </geometry>\n      </collision>\n    </link>\n\n    <joint name=\"battery-joint\" type=\"fixed\">\n      <origin xyz=\"0.000047 -0.000917 -0.004848\" rpy=\"0 0 0\"/>\n      <parent link=\"base-frame-link\"/>\n      <child link=\"battery-link\"/>\n    </joint>\n\n    <joint name=\"cover-joint\" type=\"fixed\">\n      <origin xyz=\"0.00014 0 0.01251\" rpy=\"0 0 0\"/>\n      <parent link=\"base-frame-link\"/>\n      <child link=\"cover-link\"/>\n    </joint>\n\n    <joint name=\"imu_joint\" type=\"fixed\">\n      <origin xyz=\"-0.000652 0.000827 0.000586\" rpy=\"0 0 -3.14159\"/>\n      <parent link=\"mainboard_link\"/>\n      <child link=\"imu_link\"/>\n    </joint>\n\n    <joint name=\"left-back-knee-joint\" type=\"revolute\">\n       <origin xyz=\"0 -0.049172 0\" rpy=\"0 0 3.14159\"/>\n      <parent link=\"left-back-shoulder-link\"/>\n      <child link=\"left-back-knee-link\"/>\n      <axis xyz=\"0 0 1.0\"/>\n      <limit lower=\"-1.15\" upper=\"1.15\" effort=\"1.0\" velocity=\"1.5708\"/>\n    </joint>\n\n    <joint name=\"left-back-shoulder-joint\" type=\"revolute\">\n      <origin xyz=\"-0.044596 -0.051923 -0.002102\" rpy=\"1.5708 0 -1.5708\"/>\n      <parent link=\"base-frame-link\"/>\n      <child link=\"left-back-shoulder-link\"/>\n      <axis xyz=\"0 0 -1.0\"/>\n      <limit lower=\"-2.18166\" upper=\"2.18166\" effort=\"1.0\" velocity=\"1.5708\"/>\n    </joint>\n\n    <joint name=\"left-front-knee-joint\" type=\"revolute\">\n      <origin xyz=\"7e-05 -0.049172 0\" rpy=\"0 0 0\"/>\n      <parent link=\"left-front-shoulder-link\"/>\n      <child link=\"left-front-knee-link\"/>\n      <axis xyz=\"0 0 1.0\"/>\n      <limit lower=\"-1.39626\" upper=\"2.18166\" effort=\"1.0\" velocity=\"1.5708\"/>\n    </joint>\n\n    <joint name=\"left-front-shoulder-joint\" type=\"revolute\">\n      <origin xyz=\"-0.044596 0.052264 -0.002102\" rpy=\"1.5708 0 -1.5708\"/>\n      <parent link=\"base-frame-link\"/>\n      <child link=\"left-front-shoulder-link\"/>\n      <axis xyz=\"0 0 1.0\"/>\n      <limit lower=\"-2.18166\" upper=\"2.18166\" effort=\"1.0\" velocity=\"1.5708\"/>\n    </joint>\n\n    <joint name=\"mainboard_joint\" type=\"fixed\">\n      <origin xyz=\"0.000652 -0.000827 0.006423\" rpy=\"0 0 0\"/>\n      <parent link=\"base-frame-link\"/>\n      <child link=\"mainboard_link\"/>\n    </joint>\n\n    <joint name=\"right-back-knee-joint\" type=\"revolute\">\n      <origin xyz=\"0.000015 0.049938 0.003996\" rpy=\"0 0 -0.00841\"/>\n      <parent link=\"right-back-shoulder-link\"/>\n      <child link=\"right-back-knee-link\"/>\n      <axis xyz=\"0 0 1.0\"/>\n      <limit lower=\"-1.15\" upper=\"1.15\" effort=\"1.0\" velocity=\"1.5708\"/>\n    </joint>\n\n    <joint name=\"right-back-shoulder-joint\" type=\"revolute\">\n      <origin xyz=\"0.045149 -0.051923 -0.002102\" rpy=\"-1.5708 0 -1.5708\"/>\n      <parent link=\"base-frame-link\"/>\n      <child link=\"right-back-shoulder-link\"/>\n      <axis xyz=\"0 0 1.0\"/>\n      <limit lower=\"-2.18166\" upper=\"2.18166\" effort=\"1.0\" velocity=\"1.5708\"/>\n    </joint>\n\n    <joint name=\"right-front-knee-joint\" type=\"revolute\">\n      <origin xyz=\"7e-05 0.049938 0.003996\" rpy=\"0 0 3.14159\"/>\n      <parent link=\"right-front-shoulder-link\"/>\n      <child link=\"right-front-knee-link\"/>\n      <axis xyz=\"0 0 1.0\"/>\n      <limit lower=\"-2.18166\" upper=\"1.39626\" effort=\"1.0\" velocity=\"1.5708\"/>\n    </joint>\n\n    <joint name=\"right-front-shoulder-joint\" type=\"revolute\">\n      <origin xyz=\"0.045149 0.052264 -0.002102\" rpy=\"-1.5708 0 -1.5708\"/>\n      <parent link=\"base-frame-link\"/>\n      <child link=\"right-front-shoulder-link\"/>\n      <axis xyz=\"0 0 1.0\"/>\n      <limit lower=\"-2.18166\" upper=\"2.18166\" effort=\"1.0\" velocity=\"1.5708\"/>\n    </joint>\n\n    <!-- Head and neck: meshes and geometry from Petoi's official Bittle model (PetoiCamp/ros_opencat, MIT, see head/LICENSE),\n         aligned to this model through the four shoulder hinges and turned 39.65 deg so that 0 faces forward. neck-joint is OpenCat servo 0; positive turns the head left. -->\n    <link name=\"neck-mount-link\">\n      <inertial>\n        <origin xyz=\"0 0 0\" rpy=\"0 0 0\"/>\n        <mass value=\"0.000279\"/>\n        <inertia ixx=\"1e-8\" iyy=\"1e-8\" izz=\"1e-8\" ixy=\"0\" iyz=\"0\" ixz=\"0\"/>\n      </inertial>\n      <visual>\n        <origin xyz=\"-0.044904 -0.000000 -0.031351\" rpy=\"0 0 0\"/>\n        <geometry><mesh filename=\"head/c_neck__1.stl\" scale=\"0.001 0.001 0.001\"/></geometry>\n      </visual>\n    </link>\n\n    <joint name=\"neck-mount-joint\" type=\"fixed\">\n      <origin xyz=\"0.000277 0.045075 0.007249\" rpy=\"0 0 1.5708\"/>\n      <parent link=\"base-frame-link\"/>\n      <child link=\"neck-mount-link\"/>\n    </joint>\n\n    <link name=\"head-link\">\n      <inertial>\n        <origin xyz=\"0.015356 -0.000001 0.012570\" rpy=\"0 0 0\"/>\n        <mass value=\"0.024823\"/>\n        <inertia ixx=\"1.049e-05\" iyy=\"1.325e-05\" izz=\"1.031e-05\" ixy=\"0\" iyz=\"0\" ixz=\"0\"/>\n      </inertial>\n      <visual>\n        <origin xyz=\"-0.042930 -0.014812 -0.038611\" rpy=\"0.326408 -0.099777 0.588807\"/>\n        <geometry><mesh filename=\"head/servo_neck__1.stl\" scale=\"0.001 0.001 0.001\"/></geometry>\n      </visual>\n      <visual>\n        <origin xyz=\"-0.042930 -0.014812 -0.038611\" rpy=\"0.326408 -0.099777 0.588807\"/>\n        <geometry><mesh filename=\"head/jaw_1.stl\" scale=\"0.001 0.001 0.001\"/></geometry>\n      </visual>\n      <visual>\n        <origin xyz=\"-0.042930 -0.014812 -0.038611\" rpy=\"0.326408 -0.099777 0.588807\"/>\n        <geometry><mesh filename=\"head/head__1.stl\" scale=\"0.001 0.001 0.001\"/></geometry>\n      </visual>\n      <collision>\n        <origin xyz=\"-0.042930 -0.014812 -0.038611\" rpy=\"0.326408 -0.099777 0.588807\"/>\n        <geometry><mesh filename=\"head/head__1.stl\" scale=\"0.001 0.001 0.001\"/></geometry>\n      </collision>\n      <collision>\n        <origin xyz=\"-0.042930 -0.014812 -0.038611\" rpy=\"0.326408 -0.099777 0.588807\"/>\n        <geometry><mesh filename=\"head/jaw_1.stl\" scale=\"0.001 0.001 0.001\"/></geometry>\n      </collision>\n    </link>\n\n    <joint name=\"neck-joint\" type=\"revolute\">\n      <origin xyz=\"0.000277 0.047725 0.011839\" rpy=\"0 0 1.5708\"/>\n      <parent link=\"base-frame-link\"/>\n      <child link=\"head-link\"/>\n      <axis xyz=\"0.500000 0.000000 0.866025\"/>\n      <limit lower=\"-1.5708\" upper=\"1.5708\" effort=\"1.0\" velocity=\"1.5708\"/>\n    </joint>\n\n  </robot>\n",
+  "directory": "/assets/bittle",
+  "objects": [],
+  "frames": [],
+  "mapping": {
+    "left-back-shoulder-joint": {
+      "servo": 11,
+      "sign": 1,
+      "offset": 0,
+      "verified": false
+    },
+    "left-back-knee-joint": {
+      "servo": 15,
+      "sign": 1,
+      "offset": 0,
+      "verified": false
+    },
+    "left-front-shoulder-joint": {
+      "servo": 8,
+      "sign": 1,
+      "offset": 0,
+      "verified": false
+    },
+    "left-front-knee-joint": {
+      "servo": 12,
+      "sign": 1,
+      "offset": 0,
+      "verified": false
+    },
+    "right-back-shoulder-joint": {
+      "servo": 10,
+      "sign": -1,
+      "offset": 0,
+      "verified": false
+    },
+    "right-back-knee-joint": {
+      "servo": 14,
+      "sign": -1,
+      "offset": 0,
+      "verified": false
+    },
+    "right-front-shoulder-joint": {
+      "servo": 9,
+      "sign": -1,
+      "offset": 0,
+      "verified": false
+    },
+    "right-front-knee-joint": {
+      "servo": 13,
+      "sign": -1,
+      "offset": 0,
+      "verified": false
+    },
+    "neck-joint": {
+      "servo": 0,
+      "sign": 1,
+      "offset": 0,
+      "verified": false
+    }
+  },
+  "fixed": false,
+  "gravity": -9.81,
+  "friction": 0.8,
+  "targets": {
+    "left-back-shoulder-joint": 0,
+    "left-back-knee-joint": 0,
+    "left-front-shoulder-joint": 0,
+    "left-front-knee-joint": 0,
+    "right-back-shoulder-joint": 0,
+    "right-back-knee-joint": 0,
+    "right-front-shoulder-joint": 0,
+    "right-front-knee-joint": 0,
+    "neck-joint": 0
+  },
+  "physics_hz": 240,
+  "motion_hz": 50,
+  "direction": "forward",
+  "robot_position": [
+    0,
+    0.292675919745947,
+    0.2016039410988053
+  ],
+  "robot_rotation": [
+    0,
+    0,
+    0
+  ],
+  "scripts": [],
+  "motions": [],
+  "controls": [],
+  "sensors": [
+    {
+      "id": "12e7eb194aae400ab0d97a8328c1046f",
+      "name": "Body IMU",
+      "type": "imu",
+      "link": "head-link"
+    }
+  ],
+  "actors": []
+}
