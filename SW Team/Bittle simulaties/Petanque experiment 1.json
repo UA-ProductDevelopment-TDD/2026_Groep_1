@@ -1,0 +1,269 @@
+{
+  "format": "bittle-studio",
+  "version": 1,
+  "xml": "<?xml version=\"1.0\"?>\n<!-- created with Phobos 1.0.1 \"Capricious Choutengan\" -->\n  <robot name=\"bittle\">\n\n    <link name=\"base-frame-link\">\n      <inertial>\n        <origin xyz=\"0 0 0\" rpy=\"0 0 0\"/>\n        <mass value=\"0.108\"/>\n        <inertia ixx=\"0.0001562\" ixy=\"0\" ixz=\"-4e-05\" iyy=\"0.0000613\" iyz=\"0\" izz=\"0.0002107\"/>\n      </inertial>\n      <visual name=\"base_frame\">\n        <origin xyz=\"0 0 0\" rpy=\"0 0 0\"/>\n        <geometry>\n          <mesh filename=\"obj/base_frame.obj\" scale=\"0.10 0.10 0.10\"/>\n        </geometry>\n      </visual>\n      <collision name=\"base_frame_c\">\n        <origin xyz=\"0 0 0\" rpy=\"0 0 0\"/>\n        <geometry>\n          <mesh filename=\"obj/base_frame.001.obj\" scale=\"0.10 0.10 0.10\"/>\n        </geometry>\n      </collision>\n    </link>\n\n    <link name=\"battery-link\">\n      <inertial>\n        <origin xyz=\"0 0 0\" rpy=\"0 0 0\"/>\n        <mass value=\"0.056\"/>\n        <inertia ixx=\"0.0000337\" ixy=\"0\" ixz=\"0\" iyy=\"0.0000044\" iyz=\"0.0000031\" izz=\"0.0000361\"/>\n      </inertial>\n      <visual name=\"battery\">\n        <origin xyz=\"0 0 0\" rpy=\"0 0 0\"/>\n        <geometry>\n          <mesh filename=\"obj/battery.obj\" scale=\"0.10 0.10 0.10\"/>\n        </geometry>\n      </visual>\n      <collision name=\"battery_c\">\n        <origin xyz=\"0 0 0\" rpy=\"0 0 0\"/>\n        <geometry>\n          <mesh filename=\"obj/battery.001.obj\" scale=\"0.10 0.10 0.10\"/>\n        </geometry>\n      </collision>\n    </link>\n\n    <link name=\"cover-link\">\n      <inertial>\n        <origin xyz=\"0 0 0\" rpy=\"0 0 0\"/>\n        <mass value=\"0.013\"/>\n        <inertia ixx=\"0.0000039\" ixy=\"0\" ixz=\"0\" iyy=\"0.0000057\" iyz=\"0\" izz=\"0.000009\"/>\n      </inertial>\n      <visual name=\"cover\">\n        <origin xyz=\"0 0 0\" rpy=\"0 0 0\"/>\n        <geometry>\n          <mesh filename=\"obj/cover.obj\" scale=\"0.10 0.10 0.10\"/>\n        </geometry>\n      </visual>\n      <collision name=\"cover_c\">\n        <origin xyz=\"0 0 0\" rpy=\"0 0 0\"/>\n        <geometry>\n          <mesh filename=\"obj/cover.001.obj\" scale=\"0.10 0.10 0.10\"/>\n        </geometry>\n      </collision>\n    </link>\n\n    <link name=\"imu_link\">\n      <inertial>\n        <origin xyz=\"0 0 0\" rpy=\"0 0 0\"/>\n        <mass value=\"0.001\"/>\n        <inertia ixx=\"0.00001\" ixy=\"0\" ixz=\"0\" iyy=\"0.00001\" iyz=\"0\" izz=\"0.00001\"/>\n      </inertial>\n      <visual name=\"imu\">\n        <origin xyz=\"0 0 0\" rpy=\"0 0 3.14159\"/>\n        <geometry>\n          <mesh filename=\"obj/Cube.011.obj\" scale=\"0.10 0.10 0.10\"/>\n        </geometry>\n      </visual>\n    </link>\n\n    <link name=\"left-back-knee-link\">\n      <inertial>\n        <origin xyz=\"-0.008998 0 -0.014638\" rpy=\"0 0 0\"/>\n        <mass value=\"0.017\"/>\n        <inertia ixx=\"8e-05\" ixy=\"-4e-05\" ixz=\"0\" iyy=\"0.0000065\" iyz=\"-8e-05\" izz=\"0.0000063\"/>\n      </inertial>\n      <visual name=\"left_back_knee\">\n        <origin xyz=\"-0.008998 0 -0.014638\" rpy=\"-1.5708 1.5708 0\"/>\n        <geometry>\n          <mesh filename=\"obj/left_knee.001.obj\" scale=\"0.10 0.10 0.10\"/>\n        </geometry>\n      </visual>\n      <collision name=\"left_back_knee_c\">\n        <origin xyz=\"-0.008998 0 -0.014638\" rpy=\"-1.5708 1.5708 0\"/>\n        <geometry>\n          <mesh filename=\"obj/left_knee.002.obj\" scale=\"0.10 0.10 0.10\"/>\n        </geometry>\n      </collision>\n    </link>\n\n    <link name=\"left-back-shoulder-link\">\n      <inertial>\n        <origin xyz=\"0 -0.024575 0.004372\" rpy=\"0 0 0\"/>\n        <mass value=\"0.006\"/>\n        <inertia ixx=\"0.0000044\" ixy=\"0\" ixz=\"0\" iyy=\"4e-05\" iyz=\"0\" izz=\"0.0000044\"/>\n      </inertial>\n      <visual name=\"left_back_shoulder\">\n        <origin xyz=\"0 -0.024575 0.004372\" rpy=\"-1.5708 1.5708 0\"/>\n        <geometry>\n          <mesh filename=\"obj/shoulder.001.obj\" scale=\"0.10 0.10 0.10\"/>\n        </geometry>\n      </visual>\n      <collision name=\"left_back_shoulder_c\">\n        <origin xyz=\"0 -0.024575 0.004372\" rpy=\"-1.5708 1.5708 0\"/>\n        <geometry>\n          <mesh filename=\"obj/shoulder.004.obj\" scale=\"0.10 0.10 0.10\"/>\n        </geometry>\n      </collision>\n    </link>\n\n    <link name=\"left-front-knee-link\">\n      <inertial>\n        <origin xyz=\"-0.009232 0 -0.014614\" rpy=\"0 0 0\"/>\n        <mass value=\"0.017\"/>\n        <inertia ixx=\"8e-05\" ixy=\"-4e-05\" ixz=\"0\" iyy=\"0.0000065\" iyz=\"-8e-05\" izz=\"0.0000063\"/>\n      </inertial>\n      <visual name=\"left_front_knee\">\n        <origin xyz=\"-0.009232 0 -0.014614\" rpy=\"-1.5708 1.5708 0\"/>\n        <geometry>\n          <mesh filename=\"obj/left_knee.obj\" scale=\"0.10 0.10 0.10\"/>\n        </geometry>\n      </visual>\n      <collision name=\"left_front_knee_c\">\n        <origin xyz=\"-0.009232 0 -0.014614\" rpy=\"-1.5708 1.5708 0\"/>\n        <geometry>\n          <mesh filename=\"obj/left_knee.003.obj\" scale=\"0.10 0.10 0.10\"/>\n        </geometry>\n      </collision>\n    </link>\n\n    <link name=\"left-front-shoulder-link\">\n      <inertial>\n        <origin xyz=\"0 -0.024575 0.004372\" rpy=\"0 0 0\"/>\n        <mass value=\"0.006\"/>\n        <inertia ixx=\"0.0000044\" ixy=\"0\" ixz=\"0\" iyy=\"4e-05\" iyz=\"0\" izz=\"0.0000044\"/>\n      </inertial>\n      <visual name=\"left_front_shoulder\">\n        <origin xyz=\"0 -0.024575 0.004372\" rpy=\"-1.5708 1.5708 0\"/>\n        <geometry>\n          <mesh filename=\"obj/shoulder.obj\" scale=\"0.10 0.10 0.10\"/>\n        </geometry>\n      </visual>\n      <collision name=\"left_front_shoulder_c\">\n        <origin xyz=\"0 -0.024575 0.004372\" rpy=\"-1.5708 1.5708 0\"/>\n        <geometry>\n          <mesh filename=\"obj/shoulder.007.obj\" scale=\"0.10 0.10 0.10\"/>\n        </geometry>\n      </collision>\n    </link>\n\n    <link name=\"mainboard_link\">\n      <inertial>\n        <origin xyz=\"0 0 0\" rpy=\"0 0 0\"/>\n        <mass value=\"0.001\"/>\n        <inertia ixx=\"0.00001\" ixy=\"0\" ixz=\"0\" iyy=\"0.00001\" iyz=\"0\" izz=\"0.00001\"/>\n      </inertial>\n      <visual name=\"mainboard\">\n        <origin xyz=\"0 0 0\" rpy=\"0 0 0\"/>\n        <geometry>\n          <mesh filename=\"obj/Plane.obj\" scale=\"0.10 0.10 0.10\"/>\n        </geometry>\n      </visual>\n    </link>\n\n    <link name=\"right-back-knee-link\">\n      <inertial>\n        <origin xyz=\"0.008426 -0.000238 -0.01382\" rpy=\"0 0 0\"/>\n        <mass value=\"0.017\"/>\n        <inertia ixx=\"8e-05\" ixy=\"-3e-05\" ixz=\"0\" iyy=\"0.0000065\" iyz=\"-5e-05\" izz=\"0.0000064\"/>\n      </inertial>\n      <visual name=\"right_back_knee\">\n        <origin xyz=\"0.008426 -0.000238 -0.01382\" rpy=\"-1.5708 -1.5708 0\"/>\n        <geometry>\n          <mesh filename=\"obj/right_knee.001.obj\" scale=\"0.10 0.10 0.10\"/>\n        </geometry>\n      </visual>\n      <collision name=\"right_back_knee_c\">\n        <origin xyz=\"0.008426 -0.000238 -0.01382\" rpy=\"-1.5708 -1.5708 0\"/>\n        <geometry>\n          <mesh filename=\"obj/right_knee.002.obj\" scale=\"0.10 0.10 0.10\"/>\n        </geometry>\n      </collision>\n    </link>\n\n    <link name=\"right-back-shoulder-link\">\n      <inertial>\n        <origin xyz=\"0 0.024575 0.00777\" rpy=\"0 0 0\"/>\n        <mass value=\"0.006\"/>\n        <inertia ixx=\"0.0000044\" ixy=\"0\" ixz=\"0\" iyy=\"4e-05\" iyz=\"0\" izz=\"0.0000044\"/>\n      </inertial>\n      <visual name=\"right_back_shoulder\">\n        <origin xyz=\"0 0.024575 0.00777\" rpy=\"1.5708 -1.5708 0\"/>\n        <geometry>\n          <mesh filename=\"obj/shoulder.002.obj\" scale=\"0.10 0.10 0.10\"/>\n        </geometry>\n      </visual>\n      <collision name=\"right_back_shoulder_c\">\n        <origin xyz=\"0 0.024575 0.00777\" rpy=\"1.5708 -1.5708 0\"/>\n        <geometry>\n          <mesh filename=\"obj/shoulder.005.obj\" scale=\"0.10 0.10 0.10\"/>\n        </geometry>\n      </collision>\n    </link>\n\n    <link name=\"right-front-knee-link\">\n      <inertial>\n        <origin xyz=\"0.009497 -0.000238 -0.01382\" rpy=\"0 0 0\"/>\n        <mass value=\"0.017\"/>\n        <inertia ixx=\"8e-05\" ixy=\"-3e-05\" ixz=\"0\" iyy=\"0.0000065\" iyz=\"-5e-05\" izz=\"0.0000064\"/>\n      </inertial>\n      <visual name=\"right_front_knee\">\n        <origin xyz=\"0.009497 -0.000238 -0.01382\" rpy=\"-1.5708 -1.5708 0\"/>\n        <geometry>\n          <mesh filename=\"obj/right_knee.obj\" scale=\"0.10 0.10 0.10\"/>\n        </geometry>\n      </visual>\n      <collision name=\"right_front_knee_c\">\n        <origin xyz=\"0.009497 -0.000238 -0.01382\" rpy=\"-1.5708 -1.5708 0\"/>\n        <geometry>\n          <mesh filename=\"obj/right_knee.003.obj\" scale=\"0.10 0.10 0.10\"/>\n        </geometry>\n      </collision>\n    </link>\n\n    <link name=\"right-front-shoulder-link\">\n      <inertial>\n        <origin xyz=\"0 0.024575 0.00777\" rpy=\"0 0 0\"/>\n        <mass value=\"0.006\"/>\n        <inertia ixx=\"0.0000044\" ixy=\"0\" ixz=\"0\" iyy=\"4e-05\" iyz=\"0\" izz=\"0.0000044\"/>\n      </inertial>\n      <visual name=\"right_front_shoulder\">\n        <origin xyz=\"0 0.024575 0.00777\" rpy=\"1.5708 -1.5708 0\"/>\n        <geometry>\n          <mesh filename=\"obj/shoulder.003.obj\" scale=\"0.10 0.10 0.10\"/>\n        </geometry>\n      </visual>\n      <collision name=\"right_front_shoulder_c\">\n        <origin xyz=\"0 0.024575 0.00777\" rpy=\"1.5708 -1.5708 0\"/>\n        <geometry>\n          <mesh filename=\"obj/shoulder.006.obj\" scale=\"0.10 0.10 0.10\"/>\n        </geometry>\n      </collision>\n    </link>\n\n    <joint name=\"battery-joint\" type=\"fixed\">\n      <origin xyz=\"0.000047 -0.000917 -0.004848\" rpy=\"0 0 0\"/>\n      <parent link=\"base-frame-link\"/>\n      <child link=\"battery-link\"/>\n    </joint>\n\n    <joint name=\"cover-joint\" type=\"fixed\">\n      <origin xyz=\"0.00014 0 0.01251\" rpy=\"0 0 0\"/>\n      <parent link=\"base-frame-link\"/>\n      <child link=\"cover-link\"/>\n    </joint>\n\n    <joint name=\"imu_joint\" type=\"fixed\">\n      <origin xyz=\"-0.000652 0.000827 0.000586\" rpy=\"0 0 -3.14159\"/>\n      <parent link=\"mainboard_link\"/>\n      <child link=\"imu_link\"/>\n    </joint>\n\n    <joint name=\"left-back-knee-joint\" type=\"revolute\">\n      <origin xyz=\"0 -0.049172 0\" rpy=\"0 0 0\"/>\n      <parent link=\"left-back-shoulder-link\"/>\n      <child link=\"left-back-knee-link\"/>\n      <axis xyz=\"0 0 1.0\"/>\n      <limit lower=\"-1.39626\" upper=\"2.18166\" effort=\"1.0\" velocity=\"1.5708\"/>\n    </joint>\n\n    <joint name=\"left-back-shoulder-joint\" type=\"revolute\">\n      <origin xyz=\"-0.044596 -0.051923 -0.002102\" rpy=\"1.5708 0 -1.5708\"/>\n      <parent link=\"base-frame-link\"/>\n      <child link=\"left-back-shoulder-link\"/>\n      <axis xyz=\"0 0 1.0\"/>\n      <limit lower=\"-2.18166\" upper=\"2.18166\" effort=\"1.0\" velocity=\"1.5708\"/>\n    </joint>\n\n    <joint name=\"left-front-knee-joint\" type=\"revolute\">\n      <origin xyz=\"7e-05 -0.049172 0\" rpy=\"0 0 0\"/>\n      <parent link=\"left-front-shoulder-link\"/>\n      <child link=\"left-front-knee-link\"/>\n      <axis xyz=\"0 0 1.0\"/>\n      <limit lower=\"-1.39626\" upper=\"2.18166\" effort=\"1.0\" velocity=\"1.5708\"/>\n    </joint>\n\n    <joint name=\"left-front-shoulder-joint\" type=\"revolute\">\n      <origin xyz=\"-0.044596 0.052264 -0.002102\" rpy=\"1.5708 0 -1.5708\"/>\n      <parent link=\"base-frame-link\"/>\n      <child link=\"left-front-shoulder-link\"/>\n      <axis xyz=\"0 0 1.0\"/>\n      <limit lower=\"-2.18166\" upper=\"2.18166\" effort=\"1.0\" velocity=\"1.5708\"/>\n    </joint>\n\n    <joint name=\"mainboard_joint\" type=\"fixed\">\n      <origin xyz=\"0.000652 -0.000827 0.006423\" rpy=\"0 0 0\"/>\n      <parent link=\"base-frame-link\"/>\n      <child link=\"mainboard_link\"/>\n    </joint>\n\n    <joint name=\"right-back-knee-joint\" type=\"revolute\">\n      <origin xyz=\"0.000015 0.049938 0.003996\" rpy=\"0 0 3.14159\"/>\n      <parent link=\"right-back-shoulder-link\"/>\n      <child link=\"right-back-knee-link\"/>\n      <axis xyz=\"0 0 1.0\"/>\n      <limit lower=\"-2.18166\" upper=\"1.39626\" effort=\"1.0\" velocity=\"1.5708\"/>\n    </joint>\n\n    <joint name=\"right-back-shoulder-joint\" type=\"revolute\">\n      <origin xyz=\"0.045149 -0.051923 -0.002102\" rpy=\"-1.5708 0 -1.5708\"/>\n      <parent link=\"base-frame-link\"/>\n      <child link=\"right-back-shoulder-link\"/>\n      <axis xyz=\"0 0 1.0\"/>\n      <limit lower=\"-2.18166\" upper=\"2.18166\" effort=\"1.0\" velocity=\"1.5708\"/>\n    </joint>\n\n    <joint name=\"right-front-knee-joint\" type=\"revolute\">\n      <origin xyz=\"7e-05 0.049938 0.003996\" rpy=\"0 0 3.14159\"/>\n      <parent link=\"right-front-shoulder-link\"/>\n      <child link=\"right-front-knee-link\"/>\n      <axis xyz=\"0 0 1.0\"/>\n      <limit lower=\"-2.18166\" upper=\"1.39626\" effort=\"1.0\" velocity=\"1.5708\"/>\n    </joint>\n\n    <joint name=\"right-front-shoulder-joint\" type=\"revolute\">\n      <origin xyz=\"0.045149 0.052264 -0.002102\" rpy=\"-1.5708 0 -1.5708\"/>\n      <parent link=\"base-frame-link\"/>\n      <child link=\"right-front-shoulder-link\"/>\n      <axis xyz=\"0 0 1.0\"/>\n      <limit lower=\"-2.18166\" upper=\"2.18166\" effort=\"1.0\" velocity=\"1.5708\"/>\n    </joint>\n\n    <!-- Head and neck: meshes and geometry from Petoi's official Bittle model (PetoiCamp/ros_opencat, MIT, see head/LICENSE),\n         aligned to this model through the four shoulder hinges and turned 39.65 deg so that 0 faces forward. neck-joint is OpenCat servo 0; positive turns the head left. -->\n    <link name=\"neck-mount-link\">\n      <inertial>\n        <origin xyz=\"0 0 0\" rpy=\"0 0 0\"/>\n        <mass value=\"0.000279\"/>\n        <inertia ixx=\"1e-8\" iyy=\"1e-8\" izz=\"1e-8\" ixy=\"0\" iyz=\"0\" ixz=\"0\"/>\n      </inertial>\n      <visual>\n        <origin xyz=\"-0.044904 -0.000000 -0.031351\" rpy=\"0 0 0\"/>\n        <geometry><mesh filename=\"head/c_neck__1.stl\" scale=\"0.001 0.001 0.001\"/></geometry>\n      </visual>\n    </link>\n\n    <joint name=\"neck-mount-joint\" type=\"fixed\">\n      <origin xyz=\"0.000277 0.045075 0.007249\" rpy=\"0 0 1.5708\"/>\n      <parent link=\"base-frame-link\"/>\n      <child link=\"neck-mount-link\"/>\n    </joint>\n\n    <link name=\"head-link\">\n      <inertial>\n        <origin xyz=\"0.015356 -0.000001 0.012570\" rpy=\"0 0 0\"/>\n        <mass value=\"0.024823\"/>\n        <inertia ixx=\"1.049e-05\" iyy=\"1.325e-05\" izz=\"1.031e-05\" ixy=\"0\" iyz=\"0\" ixz=\"0\"/>\n      </inertial>\n      <visual>\n        <origin xyz=\"-0.042930 -0.014812 -0.038611\" rpy=\"0.326408 -0.099777 0.588807\"/>\n        <geometry><mesh filename=\"head/servo_neck__1.stl\" scale=\"0.001 0.001 0.001\"/></geometry>\n      </visual>\n      <visual>\n        <origin xyz=\"-0.042930 -0.014812 -0.038611\" rpy=\"0.326408 -0.099777 0.588807\"/>\n        <geometry><mesh filename=\"head/jaw_1.stl\" scale=\"0.001 0.001 0.001\"/></geometry>\n      </visual>\n      <visual>\n        <origin xyz=\"-0.042930 -0.014812 -0.038611\" rpy=\"0.326408 -0.099777 0.588807\"/>\n        <geometry><mesh filename=\"head/head__1.stl\" scale=\"0.001 0.001 0.001\"/></geometry>\n      </visual>\n      <collision>\n        <origin xyz=\"-0.042930 -0.014812 -0.038611\" rpy=\"0.326408 -0.099777 0.588807\"/>\n        <geometry><mesh filename=\"head/head__1.stl\" scale=\"0.001 0.001 0.001\"/></geometry>\n      </collision>\n      <collision>\n        <origin xyz=\"-0.042930 -0.014812 -0.038611\" rpy=\"0.326408 -0.099777 0.588807\"/>\n        <geometry><mesh filename=\"head/jaw_1.stl\" scale=\"0.001 0.001 0.001\"/></geometry>\n      </collision>\n    </link>\n\n    <joint name=\"neck-joint\" type=\"revolute\">\n      <origin xyz=\"0.000277 0.047725 0.011839\" rpy=\"0 0 1.5708\"/>\n      <parent link=\"base-frame-link\"/>\n      <child link=\"head-link\"/>\n      <axis xyz=\"0.500000 0.000000 0.866025\"/>\n      <limit lower=\"-1.5708\" upper=\"1.5708\" effort=\"1.0\" velocity=\"1.5708\"/>\n    </joint>\n\n\n    <link name=\"camera-link\">\n      <inertial>\n        <origin xyz=\"0 0 0\" rpy=\"0 0 0\"/>\n        <mass value=\"0.005\"/>\n        <inertia ixx=\"1e-7\" iyy=\"1e-7\" izz=\"1e-7\" ixy=\"0\" iyz=\"0\" ixz=\"0\"/>\n      </inertial>\n      <visual>\n        <origin xyz=\"0 0 0\" rpy=\"0 0 0\"/>\n        <geometry><box size=\"0.022 0.032 0.022\"/></geometry>\n        <material name=\"camera_red\"><color rgba=\"0.9 0.1 0.1 1\"/></material>\n      </visual>\n      <collision>\n        <origin xyz=\"0 0 0\" rpy=\"0 0 0\"/>\n        <geometry><box size=\"0.022 0.032 0.022\"/></geometry>\n      </collision>\n    </link>\n\n    <joint name=\"camera-joint\" type=\"fixed\">\n      <origin xyz=\"0.045 0 0.022\" rpy=\"0 0 0\"/>\n      <parent link=\"head-link\"/>\n      <child link=\"camera-link\"/>\n    </joint>\n\n</robot>\n",
+  "directory": "/assets/bittle",
+  "objects": [
+    {
+      "type": "sphere",
+      "name": "Ball",
+      "position": [
+        0.22,
+        0,
+        0.12
+      ],
+      "size": [
+        0.07,
+        0.07,
+        0.07
+      ],
+      "mass": 0.1,
+      "color": "#d89f66",
+      "id": "b949d4e7b5fd468aaeb7c84c3c2efce9",
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "friction": 0.8
+    }
+  ],
+  "frames": [
+    {
+      "time": 0,
+      "pose": {
+        "left-back-shoulder-joint": 30,
+        "left-back-knee-joint": 30,
+        "left-front-shoulder-joint": 30,
+        "left-front-knee-joint": 30,
+        "right-back-shoulder-joint": -30,
+        "right-back-knee-joint": -30,
+        "right-front-shoulder-joint": -30,
+        "right-front-knee-joint": -30,
+        "neck-joint": 0
+      },
+      "easing": "smooth"
+    },
+    {
+      "time": 1.5,
+      "pose": {
+        "left-back-shoulder-joint": -32.61480784023478,
+        "left-back-knee-joint": 43.466662183008076,
+        "left-front-shoulder-joint": -33.63703305156273,
+        "left-front-knee-joint": 45,
+        "right-back-shoulder-joint": -36.192596079882605,
+        "right-back-knee-joint": 45,
+        "right-front-shoulder-joint": -35.170370868554656,
+        "right-front-knee-joint": 43.46666218300808,
+        "neck-joint": -34.4037019600587
+      },
+      "easing": "smooth"
+    },
+    {
+      "time": 3,
+      "pose": {
+        "left-back-shoulder-joint": 0,
+        "left-back-knee-joint": 0,
+        "left-front-shoulder-joint": 0,
+        "left-front-knee-joint": 0,
+        "right-back-shoulder-joint": 0,
+        "right-back-knee-joint": 0,
+        "right-front-shoulder-joint": 0,
+        "right-front-knee-joint": 0,
+        "neck-joint": 0
+      },
+      "easing": "smooth"
+    }
+  ],
+  "mapping": {
+    "left-back-shoulder-joint": {
+      "servo": 11,
+      "sign": 1,
+      "offset": 0,
+      "verified": false
+    },
+    "left-back-knee-joint": {
+      "servo": 15,
+      "sign": 1,
+      "offset": 0,
+      "verified": false
+    },
+    "left-front-shoulder-joint": {
+      "servo": 8,
+      "sign": 1,
+      "offset": 0,
+      "verified": false
+    },
+    "left-front-knee-joint": {
+      "servo": 12,
+      "sign": 1,
+      "offset": 0,
+      "verified": false
+    },
+    "right-back-shoulder-joint": {
+      "servo": 10,
+      "sign": -1,
+      "offset": 0,
+      "verified": false
+    },
+    "right-back-knee-joint": {
+      "servo": 14,
+      "sign": -1,
+      "offset": 0,
+      "verified": false
+    },
+    "right-front-shoulder-joint": {
+      "servo": 9,
+      "sign": -1,
+      "offset": 0,
+      "verified": false
+    },
+    "right-front-knee-joint": {
+      "servo": 13,
+      "sign": -1,
+      "offset": 0,
+      "verified": false
+    },
+    "neck-joint": {
+      "servo": 0,
+      "sign": 1,
+      "offset": 0,
+      "verified": false
+    }
+  },
+  "fixed": false,
+  "gravity": -9.81,
+  "friction": 0.8,
+  "targets": {
+    "left-back-shoulder-joint": 2.6942229581241772e-15,
+    "left-back-knee-joint": 30,
+    "left-front-shoulder-joint": 0,
+    "left-front-knee-joint": 48,
+    "right-back-shoulder-joint": 0,
+    "right-back-knee-joint": -48,
+    "right-front-shoulder-joint": 2.6942229581241772e-15,
+    "right-front-knee-joint": -30,
+    "neck-joint": 0
+  },
+  "physics_hz": 240,
+  "motion_hz": 50,
+  "direction": "forward",
+  "robot_position": [
+    0,
+    0,
+    0.2
+  ],
+  "robot_rotation": [
+    0,
+    0,
+    0
+  ],
+  "scripts": [
+    {
+      "id": "5e247124-a867-40ae-88f6-fc7297ef3a48",
+      "name": "petanque.py",
+      "source": "from bittle_sim import ctx\nimport math, config\n\nBLAAS_KRACHT = config.BLAAS_KRACHT\nMAX_AFSTAND  = config.MAX_AFSTAND\nDOEL_Y       = config.DOEL_Y   # gelinkt aan de bal via config.py\n\nafstand = BLAAS_KRACHT * MAX_AFSTAND\nZ = 0.12\npi = math.pi\n\ndef leg(ph, side):\n    sh = 22.0 * math.sin(ph)\n    kn = 30.0 + 18.0 * max(0.0, math.sin(ph + pi/2))\n    if side == 'R':\n        kn = -kn\n    return sh, kn\n\ndef walk_pose(ph):\n    lf = leg(ph, 'L'); rb = leg(ph, 'R')\n    rf = leg(ph + pi, 'R'); lb = leg(ph + pi, 'L')\n    return {\"left-front-shoulder-joint\": lf[0], \"left-front-knee-joint\": lf[1],\n            \"right-back-shoulder-joint\": rb[0], \"right-back-knee-joint\": rb[1],\n            \"right-front-shoulder-joint\": rf[0], \"right-front-knee-joint\": rf[1],\n            \"left-back-shoulder-joint\": lb[0], \"left-back-knee-joint\": lb[1]}\n\nctx.set_position([0.0, 0.0, Z], [0, 0, 0])\nctx.set_joints(walk_pose(0))\nctx.sleep(config.BAL_ROL_TIJD + 0.4)\n\nrate = ctx.rate(60); N = 140; STAPPEN = 5\nfor i in range(N + 1):\n    t = i / N\n    e = 1 - (1 - t) ** 3\n    y = e * afstand\n    ph = 2 * pi * STAPPEN * t\n    ctx.set_joints(walk_pose(ph))\n    ctx.set_position([0.0, y, Z], [0, 0, 0])\n    rate.sleep()\nctx.set_joints(walk_pose(0))\n\n# ECHTE eindpositie meten\nst = ctx.get_state()\nprint(\"state keys:\", list(st.keys()))\npos = st.get(\"position\")\nprint(\"gemeten positie:\", pos)\nechte_y = pos[1] if pos else afstand\nverschil = echte_y - DOEL_Y\nprint(\"Blaaskracht : %.2f\" % BLAAS_KRACHT)\nprint(\"Hond op     : %.2f m\" % echte_y)\nprint(\"Doel (bal)  : %.2f m\" % DOEL_Y)\nprint(\"Verschil    : %+.0f cm\" % (verschil * 100))\n",
+      "target": "main",
+      "enabled": true
+    },
+    {
+      "id": "c2b05982-1179-4d99-ac50-658d279e82ad",
+      "name": "config.py",
+      "source": "# Gedeelde instellingen - gelinkt tussen de bal en de hond\nDOEL_Y       = 1.30   # positie doelballetje (cochonnet) in meter\nMAX_AFSTAND  = 1.60   # m die de hond bij volle blaaskracht aflegt\nBLAAS_KRACHT = 0.80   # 0..1 -> van de molen-sensor\nBAL_START_Y  = 0.15   # waar de bal vertrekt\nBAL_ROL_TIJD = 1.5    # seconden dat de bal uitrolt\n",
+      "target": "main",
+      "enabled": false
+    },
+    {
+      "id": "08f29327-7792-4484-8052-518b5098e21f",
+      "name": "controller.py",
+      "source": "from bittle_sim import ctx\n\n# Simple simulated balance starting point. Tune signs and gains for this URDF.\nankles = []\nrate = ctx.rate(50)\nwhile True:\n    imu = ctx.get_imu(\"Body IMU\")\n    pitch = imu[\"orientation\"][1]              # radians\n    pitch_rate = imu[\"angular_velocity\"][1]   # rad/s\n    correction = max(-30, min(30, -30 * pitch - 3 * pitch_rate))\n    ctx.set_joints({name: correction for name in ankles})\n    rate.sleep()\n",
+      "target": "main",
+      "enabled": false
+    },
+    {
+      "id": "3fc44d3a-290f-435f-9117-1211603efa33",
+      "name": "doel.py",
+      "source": "from bittle_sim import ctx\nimport config\n\nY0 = config.BAL_START_Y\nY1 = config.DOEL_Y\nZ  = 0.035\n\n# Het cochonnet (doelballetje) rolt naar voren tot zijn plek (DOEL_Y)\nctx.set_position([0.0, Y0, Z], [0, 0, 0])\nrate = ctx.rate(60)\nN = int(config.BAL_ROL_TIJD * 60)\nfor i in range(N + 1):\n    t = i / N\n    e = 1 - (1 - t) ** 2\n    y = Y0 + e * (Y1 - Y0)\n    ctx.set_position([0.0, y, Z], [0, 0, 0])\n    rate.sleep()\nprint(\"Cochonnet gerold naar %.2f m\" % Y1)\n",
+      "target": "b949d4e7b5fd468aaeb7c84c3c2efce9",
+      "enabled": true
+    }
+  ],
+  "motions": [
+    {
+      "name": "Ademhaling",
+      "motion_type": "gait",
+      "hz": 50,
+      "speed": 0.5,
+      "direction": "forward",
+      "id": "85f05f71dd3a4d3ab4382da681f9b527",
+      "frames": [
+        {
+          "time": 0,
+          "pose": {
+            "left-back-shoulder-joint": 30,
+            "left-back-knee-joint": 30,
+            "left-front-shoulder-joint": 30,
+            "left-front-knee-joint": 30,
+            "right-back-shoulder-joint": -30,
+            "right-back-knee-joint": -30,
+            "right-front-shoulder-joint": -30,
+            "right-front-knee-joint": -30,
+            "neck-joint": 0
+          },
+          "easing": "smooth"
+        },
+        {
+          "time": 1.5,
+          "pose": {
+            "left-back-shoulder-joint": -32.61480784023478,
+            "left-back-knee-joint": 43.466662183008076,
+            "left-front-shoulder-joint": -33.63703305156273,
+            "left-front-knee-joint": 45,
+            "right-back-shoulder-joint": -36.192596079882605,
+            "right-back-knee-joint": 45,
+            "right-front-shoulder-joint": -35.170370868554656,
+            "right-front-knee-joint": 43.46666218300808,
+            "neck-joint": -34.4037019600587
+          },
+          "easing": "smooth"
+        },
+        {
+          "time": 3,
+          "pose": {
+            "left-back-shoulder-joint": 0,
+            "left-back-knee-joint": 0,
+            "left-front-shoulder-joint": 0,
+            "left-front-knee-joint": 0,
+            "right-back-shoulder-joint": 0,
+            "right-back-knee-joint": 0,
+            "right-front-shoulder-joint": 0,
+            "right-front-knee-joint": 0,
+            "neck-joint": 0
+          },
+          "easing": "smooth"
+        }
+      ],
+      "pose": {
+        "left-back-shoulder-joint": 0,
+        "left-back-knee-joint": 0,
+        "left-front-shoulder-joint": 0,
+        "left-front-knee-joint": 0,
+        "right-back-shoulder-joint": 0,
+        "right-back-knee-joint": 0,
+        "right-front-shoulder-joint": 0,
+        "right-front-knee-joint": 0,
+        "neck-joint": 0
+      }
+    }
+  ],
+  "controls": [],
+  "sensors": [
+    {
+      "id": "44fe48116286498d9f7052f5fd8c7417",
+      "name": "Body IMU",
+      "type": "imu",
+      "link": "camera-link"
+    }
+  ],
+  "actors": []
+}
