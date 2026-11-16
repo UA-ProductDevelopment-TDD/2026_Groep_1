@@ -129,7 +129,15 @@ void i2cDetect(TwoWire &wirePort) {
         Serial.print("0");
       Serial.println(address, HEX);
     }
+#ifdef I2C_DEBUG
+    // Code 2 (no device) is normal; anything else points to a bus fault.
+    if (error != 0 && error != 2)
+      Serial.printf("[I2C] scan 0x%02X: code %d, %s\n", address, error, i2cErrorName(error));
+#endif
   }
+#ifdef I2C_DEBUG
+  i2cPrintLineLevels("after scan");
+#endif
   if (!icmQ && !mpuQ) {
     updateGyroQ = false;
     PTL("No IMU detected!");

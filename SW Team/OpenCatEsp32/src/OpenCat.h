@@ -618,6 +618,7 @@ float currentAdjust[DOF] = {};
 int balanceSlope[2] = {1, 1};  // roll, pitch
 
 #include "tools.h"
+#include "i2cDebug.h"
 #include "QList/QList.h"
 #include "taskQueue.h"
 
@@ -661,7 +662,13 @@ void initRobot() {
   // #ifdef BiBoard_V1_0
   //   Wire.begin(22, 21);
   // #else
+#ifdef I2C_DEBUG
+  i2cCheckBeforeBegin();
+#endif
   Wire.begin();
+#ifdef I2C_DEBUG
+  i2cPrintLineLevels("after Wire.begin");
+#endif
   // #endif
   SoftwareVersion = SoftwareVersion + BOARD + "_" + DATE;
   PTL('k');

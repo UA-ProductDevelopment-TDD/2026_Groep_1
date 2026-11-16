@@ -713,6 +713,12 @@ void groveVisionSetup() {
   
   // Try AI module initialization
   Serial.println("Initializing Grove Vision AI Module...");
+#ifdef I2C_DEBUG
+  i2cPrintLineLevels("before AI.begin");
+  CAMERA_WIRE.beginTransmission(0x62);
+  uint8_t probe = CAMERA_WIRE.endTransmission();
+  Serial.printf("[I2C] probe AI Vision at 0x62: code %d, %s\n", probe, i2cErrorName(probe));
+#endif
   bool aiInitSuccess = false;
   
   // Method 1: Try standard initialization
@@ -756,13 +762,18 @@ void groveVisionSetup() {
   Serial.println("Set sensor angle and resolution...");
   do {
     delay(10);
-    if (CMD_OK == AI.setSensor(sensorEnable, sensorVal)) {
+    uint8_t setResult = AI.setSensor(sensorEnable, sensorVal);
+    I2C_DBG("[I2C] AI.setSensor attempt %d: code 0x%X\n", count + 1, setResult);
+    if (CMD_OK == setResult) {
       cameraSetupSuccessful = true;
       break;
     }
     count++;
     PTHL("count:", count);
   } while (count < 3);
+#ifdef I2C_DEBUG
+  i2cPrintLineLevels(cameraSetupSuccessful ? "AI set-up done" : "AI set-up FAILED");
+#endif
 }
 
 // ===== Steen-papier-schaar reactie =====
@@ -798,7 +809,13 @@ void reactToGesture(int gesture, int score) {
 void read_GroveVision() {
   // PTHL("cameraSetupSuccessful = ", cameraSetupSuccessful);
   // PTHL("AI.invoke() = ", AI.invoke());
-  if (cameraSetupSuccessful && !AI.invoke()) {
+  if (!cameraSetupSuccessful)
+    return;
+  int invokeResult = AI.invoke();
+#ifdef I2C_DEBUG
+  i2cLogInvoke(invokeResult);
+#endif
+  if (!invokeResult) {
     if (AI.boxes().size() >= 1) {
       updateCoordinateLock = true;
       xCoord = AI.boxes()[0].x;  // read x value

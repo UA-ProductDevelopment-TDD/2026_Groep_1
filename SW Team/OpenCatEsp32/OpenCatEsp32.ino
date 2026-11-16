@@ -27,6 +27,7 @@
 #define CAMERA                    // for Mu Vision camera
 #define QUICK_DEMO                // for quick demo
 // #define ROBOT_ARM                 // for attaching head clip arm
+#define I2C_DEBUG                 // print I2C line levels and error codes to the serial monitor (see src/i2cDebug.h)
 #include "src/OpenCat.h"
 
 // Set Arduino loop task stack size to 16KB (default is 8KB) for debugging
@@ -81,6 +82,9 @@ void loop() {
   //  }
   //  //— read environment sensors (low level)
   readEnvironment();  // update the gyro data
+#ifdef I2C_DEBUG
+  i2cMonitorTick();
+#endif
   //  //— special behaviors based on sensor events
   dealWithExceptions();  // low battery, fall over, lifted, etc.
   if (!tQueue->cleared()) {
